@@ -1,4 +1,4 @@
-//fetech user name from back end
+//fetch user name from back end
 Cypress.Commands.add('getUserNameFromBackend', () => {
     return cy.request('GET', 'http://localhost:9030/user')
       .its('body.name'); // Assumes the response JSON has a "name" property
